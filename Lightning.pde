@@ -2,14 +2,15 @@
 Bolt bolt;
 void setup()
 {
-  size(300,300);
-  bolt = new Bolt((int)(Math.random()*40+130),0);
+	background(0);
+	size(300,300);
+	bolt = new Bolt((int)(Math.random()*40+130),0);
 }
 void draw()
 {
 	bolt.make();
 	if(mousePressed){
-		background(255);
+		background(0);
 		bolt = new Bolt((int)(Math.random()*40+130), 0);
 		bolt.make();
 	}
@@ -28,8 +29,7 @@ class Bolt
 	}
 	void make()
 	{
-		stroke(0);
-		fill(0);
+		stroke(255);
 		while(y <= 300)
 		{
 			newX = x + (int)(Math.random()*20-10);
